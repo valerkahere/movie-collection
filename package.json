@@ -1,0 +1,14 @@
+{
+  "name": "movie-collection",
+  "version": "1.0.0",
+  "scripts": {
+    "start:frontend": "cd frontend && ng serve -o",
+    "start:backend": "cd backend && node index.mjs",
+    "dev": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
+    "postinstall": "npm install --prefix frontend && npm install --prefix backend"
+  },
+  "author": "Valerii Navalnyi",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

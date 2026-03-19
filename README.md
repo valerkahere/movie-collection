@@ -19,11 +19,16 @@ cd ./ca2-valerkahere
 ATLAS_URI=mongodb+srv://<username>:<password>@sandbox.jadwj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 ```
 
-2.2 Create a `.env` file at `ca2-valerkahere/backend/.env`
+> [!IMPORTANT]  
+> Once you created a free MongoDB cluster, and you can access it through Compass app, you need to:
+> 2.2 Create new collection, **call it movies otherwise the code won't work**
+> 2.3 import the `/data/sample_mflix.movies.json` file. 
 
-2.3 Put the code from step 1 with your **connection string** into that file
+2.4 Create a `.env` file at `ca2-valerkahere/backend/.env`
 
-2.4 Update the packages listed in package.json (including the root /, /frontend and /backend) with
+2.5 Put the code from step 1 with your **connection string** into that file
+
+2.6 Update the packages listed in package.json (including the root /, /frontend and /backend) with
 ```bash
 npm install
 ```

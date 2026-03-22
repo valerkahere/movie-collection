@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
+import { Itemsapi } from '../../services/itemsapi/itemsapi';
+import { Movie } from '../../models/movie.interface';
 
 @Component({
   selector: 'app-listitems',
@@ -7,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './listitems.css',
 })
 export class Listitems {
-
+    movieService = inject(Itemsapi);
+    
+    constructor() {
+        this.movieService.getItems();
+    }
 }

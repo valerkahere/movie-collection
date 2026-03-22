@@ -8,7 +8,7 @@ const router = express.Router();
 router.get("/", async (req, res) => {
   let collection = await db.collection("movies");
   let results = await collection.find({})
-    .limit(50)
+    .limit(60)
     .toArray();
   res.send(results).status(200);
 });

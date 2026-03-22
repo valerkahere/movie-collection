@@ -51,7 +51,12 @@ row bg-light mx-1 p-4">
       }}
     </h3>
   } -->
-
+  @if (movieService.movies()) {
+    <h3 class="text-bold">Total movies: {{ movieService.movies().length }}</h3>
+  } @else {
+    <h3 class="text-bold">No movies found!</h3>
+  }
+  
 
   <div class="row row-cols-1 row-cols-md-3 g-4"> <!-- Grid setup with gutters -->
     @for (movieData of movieService.movies(); track movieData._id) {

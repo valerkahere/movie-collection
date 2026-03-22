@@ -47,9 +47,9 @@ export class Itemsapi {
 //   }
 
   // add one movie
-  addItem(myTitle: string, myPlot: string, myYear: string, myPoster:string) {
+  addItem(myTitle: string, myYear: number | null, myPoster:string) {
       const url = `${this._apiUrl}/movies`;
-      let movie = {title:myTitle, plot:myPlot, year:myYear, poster:myPoster}
+      let movie = {title:myTitle, year:myYear, poster:myPoster}
       this._http.post<Movie[]>(url, movie)
       .subscribe(data => {  
           this.getItems();

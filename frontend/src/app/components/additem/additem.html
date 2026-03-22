@@ -1,18 +1,30 @@
-<!-- #movieForm="ngForm: Exports the form state (e.g., f.valid, f.invalid). -->
-<form class="d-flex flex-column gap-3" #movieForm="ngForm"
-    (ngSubmit)="movieForm.valid && onSubmit()">
+<!-- #movieForm="ngForm": Exports the form state (e.g., f.valid, f.invalid). -->
+<form class="d-flex flex-column gap-3" #movieForm="ngForm" (ngSubmit)="movieForm.valid && onSubmit()">
+    
+    <!-- Input 1: Movie Title -->
     <div class="form-floating">
-        <!-- 'ngModel' is required for the form to track input's validity -->
-         <!-- [(ngModel)]="name": Two-way binds the input to the name field. -->
-          <label for="movieName">Movie Title <span class="text-danger">*</span></label>
-        <input [(ngModel)]="title" #movietitle type="text" class="form-control" id="movieName" name="movieName" required
+        <input [(ngModel)]="title" type="text" class="form-control" id="movieTitle" name="movieTitle" required
             placeholder="James Bond">
-        
+        <label for="movieTitle">Movie Title <span class="text-danger">*</span></label>
     </div>
-    <div class="d-flex justify-content-between align-items-center gap-3">
-        <button type="submit" class="btn btn-primary" [disabled]="movieForm.invalid">Add Movie</button>
 
-        
+    <!-- Input 2: Movie Year -->
+    <div class="form-floating">
+        <input [(ngModel)]="year" type="number" class="form-control" id="movieYear" name="movieYear" required
+            placeholder="2024">
+        <label for="movieYear">Year <span class="text-danger">*</span></label>
+    </div>
+    
+    <!-- Input 3: Movie Poster -->
+    <div class="form-floating">
+        <input [(ngModel)]="poster" type="text" class="form-control" id="moviePoster" name="moviePoster" required
+            placeholder="https://example.com/poster.jpg">
+        <label for="moviePoster">Poster URL <span class="text-danger">*</span></label>
+    </div>
+
+    <!-- Submit Area -->
+    <div>
+        <button type="submit" class="btn btn-primary" [disabled]="movieForm.invalid">Add Movie</button>
     </div>
 
 </form>

@@ -56,6 +56,26 @@ row bg-light mx-1 p-4">
   } @else {
     <h3 class="text-bold">No movies found!</h3>
   }
+
+  <div>
+    
+
+    <form class="d-flex flex-column gap-3" #deleteForm="ngForm" (ngSubmit)="deleteForm.valid && onSubmit()">
+    
+    <!-- Input 1: ID -->
+    <div class="form-floating">
+        <input [(ngModel)]="id" type="text" class="form-control" id="movieID" name="movieID" required placeholder="69c03eecd5b7920faf126ba4">
+        <label for="movieID">Movie ID <span class="text-danger">*</span></label>
+    </div>
+
+    <!-- Submit Area -->
+    <div>
+        <button type="submit" class="btn btn-primary" [disabled]="deleteForm.invalid">Delete Movie</button>
+    </div>
+
+</form>
+
+  </div>
   
 
   <div class="row row-cols-1 row-cols-md-3 g-4"> <!-- Grid setup with gutters -->

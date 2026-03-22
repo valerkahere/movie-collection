@@ -1,1 +1,18 @@
-<p>additem works!</p>
+<!-- #movieForm="ngForm: Exports the form state (e.g., f.valid, f.invalid). -->
+<form class="d-flex flex-column gap-3" #movieForm="ngForm"
+    (ngSubmit)="movieForm.valid && onSubmit()">
+    <div class="form-floating">
+        <!-- 'ngModel' is required for the form to track input's validity -->
+         <!-- [(ngModel)]="name": Two-way binds the input to the name field. -->
+          <label for="movieName">Movie Title <span class="text-danger">*</span></label>
+        <input [(ngModel)]="title" #movietitle type="text" class="form-control" id="movieName" name="movieName" required
+            placeholder="James Bond">
+        
+    </div>
+    <div class="d-flex justify-content-between align-items-center gap-3">
+        <button type="submit" class="btn btn-primary" [disabled]="movieForm.invalid">Add Movie</button>
+
+        
+    </div>
+
+</form>

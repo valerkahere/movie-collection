@@ -8,7 +8,7 @@
     "lint": "eslint .",
     "format": "prettier --single-quote --check .",
     "prepare": "cd .. && husky install",
-    "dev": "nodemon --experimental-modules index.mjs"
+    "dev": "nodemon index.mjs"
   },
   "dependencies": {
     "cors": "^2.8.5",

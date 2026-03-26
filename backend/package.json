@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
     "format": "prettier --single-quote --check .",
-    "prepare": "husky install",
+    "prepare": "cd .. && husky install",
     "dev": "nodemon --experimental-modules index.mjs"
   },
   "dependencies": {

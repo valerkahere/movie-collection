@@ -1,5 +1,11 @@
 # MovieCollection in a monorepo (frontend and backend in one project)!
 
+- **See a live demo below**:
+
+[![Screen recording of a CRUD app in action. The video shows a user adding a new movie, browsing a list of movies, and AWS endpoints for the hosted EC2 for backend and S3 for the frontend.](/sorter__preview.png)](/assets/moviecollection_demo.mp4)
+
+
+
 Architecture:
 - Backend (api-server) uses Express.js REST API, connecting to MongoDB
 - Frontend uses Angular, interacts with the Backend api

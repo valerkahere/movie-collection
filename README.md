@@ -2,7 +2,7 @@
 
 - **See a live demo below**:
 
-[![Screen recording of a CRUD app in action. The video shows a user adding a new movie, browsing a list of movies, and AWS endpoints for the hosted EC2 for backend and S3 for the frontend.](/assets/moviecollection_preview.png)](/assets/moviecollection_demo.mp4)
+[![Screen recording of a CRUD app in action. The video shows a user adding a new movie, browsing a list of movies, and AWS endpoints for the hosted EC2 for backend and S3 for the frontend.](/assets/moviecollection_thumbnail.png)](https://www.valerkahere.com/assets/videos/MovieCollection_demo/moviecollection_demo.mp4)
 
 
 
